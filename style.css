@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+    cursor:pointer;
+    text-transform: uppercase;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 70px;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type:none;
+}
+li{
+    padding: 6px 0;
+    text-align: center;
+}
+a{
+    position: relative;
+    display: block;
+    padding: 4px 0;
+    font-family: dosis;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+a:hover{
+    color:red;
+    background: red;
+}
+a:after{
+    position: absolute;
+    content: "";
+    top:100%;
+    left:0;
+    width:100%;
+    height: 3px;
+    background: red;
+    color:red;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+}
+a:hover:after{
+    transform:scaleX(1);
+    transform-origin: right;
+}
